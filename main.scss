@@ -1,0 +1,164 @@
+@use "reset.scss";
+@import "colors.scss";
+@import "responsividade.scss";
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: $background;
+}
+
+header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+
+    img {
+      width: 320px;
+    }
+
+    ul {
+      display: flex;
+      position: relative;
+      top: 40%;
+      li {
+        padding: 5px;
+        list-style: none;
+        border: solid $navitemcolor 2px;
+        border-radius: 10px;
+        display: flex;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          color: $navitemcolor;
+        }
+      }
+    }
+  }
+}
+#ContentSection {
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  padding-bottom: 120px;
+  border-radius: 10px;
+  .container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 3.3%;
+  }
+  #SectionTittle {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .IntContent {
+    h3 {
+      text-align: center;
+      margin: 3px 0 3px 0;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+      margin: 3px 0 6px 0;
+    }
+    button {
+      width: 100%;
+      cursor: pointer;
+      height: 30px;
+      font-size: large;
+      font-weight: bold;
+      border-radius: 10px;
+      border: solid $ButtonColor 3px;
+      color: $navitemcolor;
+      background-color: $ButtonColor;
+      &:hover {
+        background-color: transparent;
+        color: $ButtonColor;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 979px) {
+  header {
+    .container {
+      max-width: 80%;
+      display: block;
+
+      img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .NavBar {
+        ul {
+          #Motorola {
+            margin: 0 5px 0 5px;
+          }
+          #xiaomi {
+            margin-left: 5px;
+          }
+          li {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 2px;
+          }
+        }
+      }
+    }
+  }
+  #ContentSection {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 0;
+
+    #SectionTittle {
+      margin-top: 15px;
+      font-size: 25px;
+    }
+    .container {
+      display: block;
+
+      img {
+        display: flex;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      button {
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+      }
+      p {
+        color: white;
+      }
+      h3 {
+        color: white;
+      }
+      .IntContent {
+        .ProductDiv {
+          margin-bottom: 70px;
+          .ProductDescription {
+            p {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
